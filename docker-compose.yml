@@ -6,4 +6,5 @@ services:
     container_name: finnnettstasjon
     volumes:
       - ./finnnettstasjon.py:/usr/src/app/finnnettstasjon.py
-    restart: always
+    command: /bin/sh
+      #restart: always
