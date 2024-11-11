@@ -1,7 +1,7 @@
 import math
-from arcgis.gis import GIS
-from arcgis.features import FeatureLayer
-from arcgis.geometry import Geometry
+#from arcgis.gis import GIS
+#from arcgis.features import FeatureLayer
+#from arcgis.geometry import Geometry
 import configparser
 import requests
 import regex as re
@@ -137,7 +137,7 @@ def calculate_distance(feature, point):
         #print(f"Distanse: {distance}")  # Skriv ut avstanden for å se om den blir beregnet
         return distance
 
-def get_arcgis_lag():
+""" def get_arcgis_lag():
     username = config['arcgis']['username']
     password = config['arcgis']['password']
 
@@ -156,7 +156,7 @@ def get_arcgis_lag():
     print("Feature layer loaded")
     print(feature_layer.properties.name)
 
-    return feature_layer
+    return feature_layer """
 
 def find_closest( lon, lat):
 
@@ -264,7 +264,7 @@ def find_nearest_point(df, my_lat, my_lon):
     return nearest_point
 
 trafostasjon_valg = get_sharepoint_trafos()
-feature_layer = get_arcgis_lag()
+#feature_layer = get_arcgis_lag()
 
 csv_file = "nettstasjoner_frakart.csv"
 
