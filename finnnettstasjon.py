@@ -317,6 +317,7 @@ for item in data:
             print(f"Distanse: {distance} meter") """
             #driftsmerking = closest.get('DRIFTSMERKING', '')
             driftsmerking = closest.get('navn', '')
+            #objectid = closest.get('OBJECTID', '')
 
             print(f"Driftsmerking: {driftsmerking}")
             #driftsmerking_cleaned = re.sub(r'[^a-zA-Z]', '', driftsmerking).lower().encode('utf-8').decode('unicode_escape')
@@ -332,6 +333,8 @@ for item in data:
                 matched_value = "Åheim"
             elif  driftsmerking_cleaned == "bøistryn":
                 matched_value = "Bø"
+            elif driftsmerking_cleaned == "høyanger":
+                matched_value = "Hydro Høyanger"
             else:
                 # Søk etter en match i trafostasjon_valg ved å normalisere begge sidene for sammenligning
 
